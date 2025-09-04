@@ -10,7 +10,7 @@ const sessionRoutes = require('./routes/sessionRoutes');
 const app = express();
 const allowedOrigins = [
   "http://localhost:3000",        // dev
-  "https://code-editor-5yloklmq7-pandey2022k22ubs-projects.vercel.app/" 
+  "https://code-editor-5yloklmq7-pandey2022k22ubs-projects.vercel.app" 
 ];
 app.use(
   cors({
