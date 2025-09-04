@@ -8,7 +8,16 @@ const generateRoutes = require('./routes/generateRoutes');
 const sessionRoutes = require('./routes/sessionRoutes');
 
 const app = express();
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:3000",        // dev
+  "https://code-editor-5yloklmq7-pandey2022k22ubs-projects.vercel.app/" 
+];
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
